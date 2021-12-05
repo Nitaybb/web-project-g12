@@ -49,20 +49,25 @@
 }
 #product1 { 
     grid-area: main1;
-    content: url(images/product5.jpg);
+    content: url();
 }
 #product2 {
     grid-area: main2;
+    content: url();
 }
 #product3 {
     grid-area: main3;
+    content: url();
 }
 #product4 {
     grid-area: main4;
+    content: url();
 }
 #product5 {
     grid-area: main5;
+    content: url();
 }
 #product6 {
     grid-area: main6;
+    content: url();
 }
