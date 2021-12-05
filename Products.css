@@ -1,0 +1,10 @@
+#GridContainer{
+    display: grid;
+    grid-template-areas: 
+    'header header header header header'
+    'left left main main main'
+    'left left main main main'
+    'footer1 footer1 footer1 footer1 footer1'
+    'footer2 footer2 footer2 footer2 footer2';
+    border: 2px black;
+}
