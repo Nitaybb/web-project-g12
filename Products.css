@@ -17,7 +17,6 @@
     padding: 80px;
     font-size: 20px;
     text-align: center;
-    background-color: pink;
     border: 2px black;
 }
 .buttons{
@@ -49,25 +48,30 @@
 }
 #product1 { 
     grid-area: main1;
-    content: url();
+    background:  url(images/product1.png);
+    background-size: 100%;
 }
 #product2 {
     grid-area: main2;
-    content: url();
+    background: url(images/product2.png);
+    background-size: 100%;
 }
 #product3 {
     grid-area: main3;
-    content: url();
+    background: url(images/product3.png);
+    background-size: 100%;
 }
 #product4 {
     grid-area: main4;
-    content: url();
+    background: url(images/product4.jpg);
+    background-size: 100%;
 }
 #product5 {
     grid-area: main5;
-    content: url();
+    background: url(images/product5.jpg);
+    background-size: 100%;
 }
 #product6 {
     grid-area: main6;
-    content: url();
+    background: url();
 }
