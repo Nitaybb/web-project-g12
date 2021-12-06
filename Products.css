@@ -24,7 +24,7 @@
     height: 25px;
     width: 150px;
     margin: 105px;
-    background-color: silver;
+    background-color: rgb(124, 158, 132);
     font-size: 15px;
     text-align: center;
 }
@@ -45,6 +45,11 @@
 }
 #btn6{
     grid-area: btn6;
+}
+#backBtn{
+    position: relative;
+    top: 1000px;
+    left: 800px;
 }
 #product1 { 
     grid-area: main1;

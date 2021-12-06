@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="Products.css">
+    <script src="Products.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,17 +11,20 @@
 <body>
     <div id="GridContainer">
         <div id="product1" class="Products"></div>
-        <button id="btn1" type="button" class="buttons"><b>הוספה לסל הקניות</b></button>
+        <button id="btn1" type="button" class="buttons" onclick="ShowHideDiv(product1.Products)"><b>פרטי המוצר</b></button>
         <div id="product2" class="Products"></div>
-        <button id="btn2" type="button" class="buttons"><b>הוספה לסל הקניות</b></button>
+        <button id="btn2" type="button" class="buttons"><b>פרטי המוצר</b></button>
         <div id="product3" class="Products"></div>
-        <button id="btn3" type="button" class="buttons"><b>הוספה לסל הקניות</b></button>
+        <button id="btn3" type="button" class="buttons"><b>פרטי המוצר</b></button>
         <div id="product4" class="Products"></div>
-        <button id="btn4" type="button" class="buttons"><b>הוספה לסל הקניות</b></button>
+        <button id="btn4" type="button" class="buttons"><b>פרטי המוצר</b></button>
         <div id="product5" class="Products"></div>
-        <button id="btn5" type="button" class="buttons"><b>הוספה לסל הקניות</b></button>
+        <button id="btn5" type="button" class="buttons"><b>פרטי המוצר</b></button>
         <div id="product6" class="Products"></div>
-        <button id="btn6" type="button" class="buttons"><b>הוספה לסל הקניות</b></button>
+        <button id="btn6" type="button" class="buttons"><b>פרטי המוצר</b></button>
+        <form>
+            <input type="button" value="לעמוד הקודם" class="buttons" id="backBtn" onclick="history.back()">
+           </form>
     </div> 
 </body>
 </html>
