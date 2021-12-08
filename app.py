@@ -63,6 +63,9 @@ def contact_us():
 def registeration():
     return render_template('registeration.html')
 
+@app.route('/reviews')
+def reviews():
+    return render_template('reviews.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
