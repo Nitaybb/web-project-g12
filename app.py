@@ -7,15 +7,9 @@ app = Flask(__name__)
 @app.route('/home_page')
 @app.route('/home')
 @app.route('/')
-def hello_func():
-    # DB
-    found = True
-
-    if found:
-        name = 'Arseni'
-        return render_template('index.html', name=name, status=True)
-    else:
-        return render_template('index.html')
+def home():
+    # DO SOMETHING WITH DB
+    return render_template('index.html')
 
 
 
