@@ -43,5 +43,11 @@ def registeration():
 def reviews():
     return render_template('reviews.html')
 
+
+@app.route('/products')
+def products():
+    return render_template('products.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
