@@ -22,26 +22,8 @@ def hello_func():
 @app.route('/about')
 def about_func():
     # DO SOMETHING WITH DB
-    return render_template('about.html',
-                           uni='BGU',
-                           profile={'name': 'Arseni',
-                                    'second_name': 'Perchik',
-                                    'middle_name': 'Ariel'},
-                           degrees=['BSc.', 'MSc.'],
-                           hobbies=('art',
-                                    'programming',
-                                    'teaching',
-                                    'horses',
-                                    'travel',
-                                    'music',
-                                    'sql',
-                                    'programming',
-                                    'teaching',
-                                    'horses',
-                                    'travel',
-                                    'music',
-                                    'sql')
-                           )
+    return render_template('about.html')
+
 
 
 @app.route('/catalog')

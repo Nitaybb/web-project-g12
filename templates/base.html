@@ -9,13 +9,15 @@
 <body dir="rtl">
 {% include('menu.html') %}
 
-{% block body %}
-<h2>Message from Base</h2>
+<div class="main-container">
+    {% block body %}
 
 {% endblock %}
+</div>
+
 
 {% block footer %}
-<h3>The Base footer</h3>
+
 {% endblock %}
 </body>
 </html>
