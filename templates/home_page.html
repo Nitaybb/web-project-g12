@@ -7,9 +7,13 @@
 {% block body %}
 <div id="gridContainer">
 <link rel="stylesheet" href="/static/css/home_page.css">
-    <img id="HP1" src="/static/images/home_page_images/HomePagePic1.jpg" />
-    <img id="HP2" src="/static/images/home_page_images/HomePagePic9.jpg" />
-    <h1 id="HP2"></B>ברוכים הבאים לדודי בוטיק שיער</B> </h1>
+        <!-- <img id="HP1" src="/static/images/home_page_images/HomePagePic1.jpg" /> -->
+    <div id="HP2" class="home_page_hero">
+        <div class="hero-text">
+        <h1>ברוכים הבאים</h1>
+            <h2>דודי עיצוב שיער</h2>
+        </div>
+    </div>
     <div id="blue"></div>
  <div class="about">
   <h1 id="title1">כל אחד יכול לגזור, אבל לא כל אחד יודע...</h1>
@@ -36,7 +40,7 @@
   אנו מבצעים את כל סוגי הצביעה והגוונים תוך התאמת הטכניקה למרקם והפיגמנט של השערה. בזכות הדיוק בביצוע, השירות האישי והחומרים המתקדמים ביותר, תוכלי ליהנות מהגוון עליו את חולמת
   </p>
     </div>
-
+ </div>
 
    {{ super() }}
 {% endblock %}

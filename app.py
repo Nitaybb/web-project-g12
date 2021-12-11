@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     # DO SOMETHING WITH DB
-    return render_template('index.html')
+    return render_template('home_page.html')
 
 
 
