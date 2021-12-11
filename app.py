@@ -19,6 +19,9 @@ def about_func():
     return render_template('about.html')
 
 
+@app.route('/products')
+def products():
+    return render_template('products.html')
 
 @app.route('/catalog')
 def catalog_func():
@@ -44,9 +47,6 @@ def reviews():
     return render_template('reviews.html')
 
 
-@app.route('/products')
-def products():
-    return render_template('products.html')
 
 
 if __name__ == '__main__':

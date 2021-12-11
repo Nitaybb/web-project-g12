@@ -1,18 +1,10 @@
 body{
-    margin: 0px;
-    padding:0px;
-    font-family: poppins, sans-serif;
     box-sizing: border-box;
     display: grid;
     height: 100%;
     text-align: center;
 }
-html{
-    display: grid;
-    height: 100%;
-    place-items: center;
-    text-align: center;
-}
+
 .container{
     position: relative;
     width: 400px;
