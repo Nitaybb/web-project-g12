@@ -1,10 +1,4 @@
-body{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f1f1f1;
-}
+
 
 .about-section{
     background: url(/static/Images/home_page_images/HomePagePic8.jpg) no-repeat left;
