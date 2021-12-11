@@ -51,7 +51,7 @@ body{
     font-size: 13px;
 }
 
-@media screen and (max-width:1200px){
+@media screen and (max-width:1500px){
     .inner-container{
         padding: 10px;
     }
