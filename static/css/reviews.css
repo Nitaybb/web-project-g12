@@ -8,12 +8,14 @@ body{
     text-align: center;
 }
 html{
+    display: grid;
     height: 100%;
     place-items: center;
     text-align: center;
 }
 .container{
     position: relative;
+    width: 400px;
     background: #2D3644;
     padding: 20px 30px;
     border: 1px solid #444;

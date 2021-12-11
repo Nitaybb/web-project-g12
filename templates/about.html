@@ -1,35 +1,31 @@
 {% extends 'base.html' %}
 
 {% block title %}
-אודות
+    אודות
 {% endblock %}
 
 {% block body %}
 
 <link rel="stylesheet" href="static/css/about.css">
-{% set page_name = 'אודות המספרה' %}
-<div class="about-section">
-    <div class="inner-container">
-        <h1>אודות המספרה</h1>
-        <p class="text">
-            המספרה של דודי זו מספרת בוטיק רבת שנים אשר מציעה את כל טיפולי השיער: תספורת, צביעה על כלל סוגיה, החלקות ועוד. לכל סוגי השיער בהתאמה אישית ומקצועית לפי רצון וחלום הלקוח והלקוחה. בנוסף מתמחים בתסרוקות כלה והפקות אופנה.
+    {% set page_name = 'אודות המספרה' %}
 
-            אצלנו תמצאו יחס אישי, חם וביתי לצד אוירה אורבנית באזור הכי מרכזי בתל אביב סמוך לכיכר הבימה.
-
-            דודי הינו מעצב שיער כבר מעל 20 שנים ובעל שם דבר בקהילת הספרים בארץ.
-            לצידו עובדים אלה ויוסי בעלי התמחות בצביעה ובעיצוב שיער.
-        </p>
-        <div class="skills">
-            <span></span>
-            <span></span>
-            <span>נשמח לראותכם</span>
+     <div class="about-section">
+        <div class="inner-container">
+            <h1>אודות המספרה</h1><br>
+            <p class="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus velit ducimus, enim inventore earum, eligendi nostrum pariatur necessitatibus eius dicta a voluptates sit deleniti autem error eos totam nisi neque voluptates sit deleniti autem error eos totam nisi neque.
+            </p>
+            <div class="skills">
+                <span>Web Design</span>
+                <span>Photoshop & Illustrator</span>
+                <span>Coding</span>
+            </div>
         </div>
     </div>
-</div>
 
-{{ super() }}
+    {{ super() }}
 {% endblock %}
 
 {% block footer %}
-{{ super() }}
+    {{ super() }}
 {% endblock %}
