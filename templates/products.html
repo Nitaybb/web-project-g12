@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    מוצרים
+{% endblock %}
+
+{% block body %}
+    <link rel="stylesheet" href="/static/css/Products.css">
+    <script src="/static/js/Products.js"></script>
+    <div id="GridContainer">
+        <div id="product1" class="Products" style="display: block"></div>
+        <button id="btn1" type="button" class="buttons" onclick="hideOrShow('p1Info', 'product1')"><b>פרטי המוצר</b></button>
+        <div id="p1Info" class="ProductInfo" style="display: none;"><b>מסכת קרטין</b><br><br>לשיער שעבר החלקה<br>500 מ"ג<br>40₪</div>
+        <div id="product2" class="Products" style="display: block"></div>
+        <button id="btn2" type="button" class="buttons" onclick="hideOrShow('p2Info', 'product2')"><b>פרטי המוצר</b></button>
+        <div id="p2Info" class="ProductInfo" style="display: none;">בלה בלה בלה</div>
+        <div id="product3" class="Products" style="display: block"></div>
+        <button id="btn3" type="button" class="buttons" onclick="hideOrShow('p3Info', 'product3')"><b>פרטי המוצר</b></button>
+        <div id="p3Info" class="ProductInfo" style="display: none;">בלה בלה בלה</div>
+        <div id="product4" class="Products" style="display: block"></div>
+        <button id="btn4" type="button" class="buttons" onclick="hideOrShow('p4Info', 'product4')"><b>פרטי המוצר</b></button>
+        <div id="p4Info" class="ProductInfo" style="display: none;">בלה בלה בלה</div>
+        <div id="product5" class="Products" style="display: block"></div>
+        <button id="btn5" type="button" class="buttons" onclick="hideOrShow('p5Info', 'product5')"><b>פרטי המוצר</b></button>
+        <div id="p5Info" class="ProductInfo" style="display: none;">בלה בלה בלה</div>
+        <div id="product6" class="Products" style="display: block"></div>
+        <button id="btn6" type="button" class="buttons" onclick="hideOrShow('p6Info', 'product6')"><b>פרטי המוצר</b></button>
+        <div id="p6Info" class="ProductInfo" style="display: none;">בלה בלה בלה</div>
+        <form>
+            <input type="button" value="לעמוד הקודם" class="buttons" id="backBtn" onclick="history.back()">
+           </form>
+    </div>
+ {{ super() }}
+{% endblock %}
+
+{% block footer %}
+    {{ super() }}
+{% endblock %}

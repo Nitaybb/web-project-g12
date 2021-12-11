@@ -1,0 +1,114 @@
+
+#GridContainer{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 15% 15% 15% 15% 15%;
+    grid-template-areas:
+    'header header header'
+    'main1 main2 main3'
+    'btn1 btn2 btn3'
+    'main4 main5 main6'
+    'btn4 btn5 btn6' ;
+}
+.Products{
+    display: grid;
+    height: 80px;
+    width: 120px;
+    margin: 50px;
+    padding: 80px;
+    font-size: 20px;
+    text-align: start;
+    border: 2px black;
+}
+.buttons{
+    display: grid;
+    height: 25px;
+    width: 150px;
+    margin: 105px;
+    background-color: rgb(158, 124, 124);
+    font-size: 15px;
+    text-align: center;
+}
+#btn1{
+    grid-area: btn1;
+}
+#btn2{
+    grid-area: btn2;
+}
+#btn3{
+    grid-area: btn3;
+}
+#btn4{
+    grid-area: btn4;
+}
+#btn5{
+    grid-area: btn5;
+}
+#btn6{
+    grid-area: btn6;
+}
+#backBtn{
+    position: relative;
+    top: 1000px;
+    left: 800px;
+}
+#product1 {
+    grid-area: main1;
+    background:  url(/static/images/products_images/product1.png);
+    background-size: 100%;
+}
+#product2 {
+    grid-area: main2;
+    background: url(/static/images/products_images/product2.png);
+    background-size: 100%;
+}
+#product3 {
+    grid-area: main3;
+    background: url(/static/images/products_images/product3.png);
+    background-size: 100%;
+}
+#product4 {
+    grid-area: main4;
+    background: url(/static/images/products_images/product4.jpg);
+    background-size: 100%;
+}
+#product5 {
+    grid-area: main5;
+    background: url(/static/images/products_images/product5.jpg);
+    background-size: 100%;
+}
+#product6 {
+    grid-area: main6;
+    background: url(/static/images/products_images/product6.jpg);
+    background-size: 100%;
+}
+.ProductInfo {
+    display: grid;
+    height: 70px;
+    width: 110px;
+    margin: 50px;
+    padding: 80px;
+    font-size: 15px;
+    text-align:center ;
+    background: url(/static/images/products_images/productInfoBackground.jfif);
+    background-size: 100%;
+
+}
+#p1Info {
+    grid-area: main1;
+}
+#p2Info {
+    grid-area: main2;
+}
+#p3Info {
+    grid-area: main3;
+}
+#p4Info {
+    grid-area: main4;
+}
+#p5Info {
+    grid-area: main5;
+}
+#p6Info {
+    grid-area: main6;
+}
