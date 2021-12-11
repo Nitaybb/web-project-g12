@@ -3,8 +3,11 @@ body{
     padding:0px;
     font-family: poppins, sans-serif;
     box-sizing: border-box;
+    display: grid;
+    height: 100%;
+    text-align: center;
 }
-html,body{
+html{
     display: grid;
     height: 100%;
     place-items: center;
@@ -13,11 +16,11 @@ html,body{
 .container{
     position: relative;
     width: 400px;
-    background: #111;
+    background: #2D3644;
     padding: 20px 30px;
     border: 1px solid #444;
     border-radius: 5px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -31,6 +34,7 @@ html,body{
     font-size: 20px;
     color: #666;
     font-weight: 500;
+
 }
 .container .edit{
     position: absolute;
@@ -72,18 +76,25 @@ input#rate-5:checked ~ label{
 
 #rate-1:checked ~ form header:before{
     content: "בכלל לא מרוצה";
+    position: relative;
+
 }
 #rate-2:checked ~ form header:before{
     content: " לא מרוצה";
+    position: relative;
 }
 #rate-3:checked ~ form header:before{
     content: "נטרלי";
+    position: relative;
 }
 #rate-4:checked ~ form header:before{
     content: "מרוצה  ";
+    position: relative;
+
 }
 #rate-5:checked ~ form header:before{
     content: "ממש מרוצה!";
+    position: relative;
 }
 .container form{
     display: none;
@@ -97,11 +108,27 @@ form header{
     font-size: 25px;
     color: #fe7;
     font-weight: 500;
-    margin: 5px 0 20px 0;
+    margin: 30px 0 20px 0;
     text-align: center;
     transition: all 0.2s ease;
 }
-
+form #lab{
+    font-size: 20px;
+    color: #666;
+    font-weight: 500;
+}
+form #inputName{
+    overflow: hidden;
+    height: 40px;
+    width: 84%;
+    outline: none;
+    color: #eee;
+    border: 1px solid #111;
+    background: #2D3644;
+    padding: 10px;
+    font-size: 17px;
+    resize: none;
+}
 form .textarea{
     height: 100px;
     width: 100%;
@@ -112,24 +139,24 @@ form .textarea textarea{
     width: 100%;
     outline: none;
     color: #eee;
-    border: 1px solid #333;
-    background: #222;
+    border: 1px solid #111;
+    background: #2D3644;
     padding: 10px;
     font-size: 17px;
     resize: none;
 }
 form .btn{
-height: 45px;
-width: 100%;
-margin: 15px 0;
+    height: 45px;
+    width: 100%;
+    margin: 15px 0;
 }
 
 form .btn button{
     height: 100%;
     width: 100%;
-    border: 1px solid #444;
+    border: 1px solid #111;
     outline: none;
-    background: #222;
+    background: #2D3644;
     color: #999;
     font-size: 17px;
     font-weight: 500;
@@ -163,7 +190,7 @@ a{
 .testimonial-heading h1{
     font-size: 2.2rem;
     font-weight: 500;
-    background-color: #202020;
+    background-color: #54737E;
     color: #ffffff;
     padding: 10px 20px;
 }
@@ -229,12 +256,19 @@ a{
     margin-bottom: 20px;
 }
 .client-comment p{
-font-size: 0.9rem;
-color: #4b4b4b;
+    font-size: 0.9rem;
+    color: #4b4b4b;
 }
 .testimonial-box:hover{
     transform: translateY(-10px);
     transition: all ease 0.3s;
+}
+
+@media(max-width:1300px){
+    .testimonial-box{
+        width: 45%;
+        padding: 10px;
+    }
 }
 
 @media(max-width:1060px){
@@ -253,10 +287,10 @@ color: #4b4b4b;
 }
 @media(max-width:300px){
     .box-top{
-       flex-wrap: wrap;
-       margin-bottom: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
     }
     .reviews{
-    margin-top: 10px;
-     }
+        margin-top: 10px;
+    }
 }

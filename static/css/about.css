@@ -1,7 +1,12 @@
-*{    box-sizing: border-box;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans",sans-serif;
+    box-sizing: border-box;
 }
-body{
 
+body{
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,7 +14,7 @@ body{
 }
 
 .about-section{
-    background: url(/static/images/home_page_images/HomePagePic8.jpg) no-repeat left;
+    background: url(/static/Images/home_page_images/HomePagePic8.jpg) no-repeat left;
     background-size: 65%;
     background-color: #fdfdfd;
     overflow: hidden;
@@ -17,7 +22,8 @@ body{
 }
 
 .inner-container{
-    width: 55%;
+    width: 60%;
+    opacity: 0.8;
     float: right;
     background-color: #fdfdfd;
     border: 1px solid #545454 ;
@@ -43,4 +49,29 @@ body{
     justify-content: space-between;
     font-weight: 700;
     font-size: 13px;
+}
+
+@media screen and (max-width:1200px){
+    .inner-container{
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width:800px){
+    .about-section{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner-container{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:300px){
+    .about-section{
+        padding: 0;
+    }
+    .inner-container{
+        padding: 60px;
+    }
 }

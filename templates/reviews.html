@@ -1,173 +1,212 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    reviews
+ביקורו,
 {% endblock %}
-    <link rel="stylesheet" href="static/css/reviews.css">
-    <link rel="shortcut icon" href="review_icon.jpeg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="file:///E:/fontawesome/css/all.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script src="http://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/static/css/reviews.css">
+<link rel="shortcut icon" href="review_icon.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="file:///E:/fontawesome/css/all.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<script src="http://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+
 </head>
 {% block body %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="file:///E:/fontawesome/css/all.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<script src="http://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/static/css/reviews.css">
 
-  {% set page_name = 'ביקורות' %}
-    <h1> {{ page_name }}</h1>
-    <div class="text">
-        <h2>הוספת דירוג ותגובה:</h2>
+{% set page_name = 'ביקורות' %}
+<h1> {{ page_name }}</h1>
+<div class="text">
+    <h2>הוספת דירוג ותגובה:</h2>
+</div>
+<div class="container">
+    <div class="post">
+        <div class="text">תודה על תגובתך!</div>
+        <div class="edit">ערוך</div>
     </div>
-    <div class="container">
-        <div class="post">
-            <div class="text">תודה על תגובתך!</div>
-            <div class="edit">ערוך</div>
-        </div>
-        <div class="star-widget">
-            <input type="radio" name="rate" id="rate-5">
-            <label for="rate-5" class="fas fa-star"></label>
-            <input type="radio" name="rate" id="rate-4">
-            <label for="rate-4" class="fas fa-star"></label>
-            <input type="radio" name="rate" id="rate-3">
-            <label for="rate-3" class="fas fa-star"></label>
-            <input type="radio" name="rate" id="rate-2">
-            <label for="rate-2" class="fas fa-star"></label>
-            <input type="radio" name="rate" id="rate-1">
-            <label for="rate-1" class="fas fa-star"></label>
-            <form action="#">
-                <header>  </header>
-               <div class="textarea">
-                   <textarea cols="30" placeholder="רשום תגובתך..."></textarea>
-               </div>
-               <div class="btn">
+    <div class="star-widget" id="rate">
+        <input type="radio" name="rate" id="rate-5">
+        <label for="rate-5" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-4">
+        <label for="rate-4" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-3">
+        <label for="rate-3" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-2">
+        <label for="rate-2" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-1">
+        <label for="rate-1" class="fas fa-star"></label>
+        <form action="#">
+            <header>  </header>
+            <div>
+                <label id="lab">שם:</label>
+                <textarea id="inputName"> </textarea>
+            </div>
+            <div class="textarea" id="comment">
+                <textarea cols="30" placeholder="רשום תגובתך..."></textarea>
+            </div>
+            <div class="btn">
                 <button type="sumbit">הגב</button>
-               </div>
-            </form>
+            </div>
+        </form>
 
-        </div>
     </div>
-    <script>
-        const btn=document.querySelector("button")
-        const post=document.querySelector(".post")
-        const widget=document.querySelector(".star-widget")
-        const editBtn=document.querySelector(".edit")
-        btn.onclick=()=>
-        {
-            widget.style.display="none";
-            post.style.display="block";
+</div>
+
+<script>
+    const btn=document.querySelector("button")
+    const post=document.querySelector(".post")
+    const widget=document.querySelector(".star-widget")
+    const editBtn=document.querySelector(".edit")
+    btn.onclick=()=>
+    {
+        widget.style.display="none";
+        post.style.display="block";
 
         editBtn.onclick=()=>
         {
             widget.style.display="block";
             post.style.display="none";
         }
-            return false;
+        return false;
+    }
+</script>
 
+<script>
+    let reviews = [];
+    const addreview =(ev)=>{
+        ev.preventDefault();
+        let review= {
+            rate1: document.getElementById('rate-1').value,
+            rate2: document.getElementById('rate-2').value,
+            rate3: document.getElementById('rate-3').value,
+            rate4: document.getElementById('rate-4').value,
+            rate5: document.getElementById('rate-5').value,
+            id: Date.now(),
+            name: document.getElementById('inputName').value,
+            comment: document.getElementById('comment').value
         }
-    </script>
-    <section id="testimonials">
-        <div class="testimonial-heading">
-            <span>ביקורות</span>
-            <h1>לקוחות כותבים</h1>
-        </div>
-        <div class="testimonial-box-container">
-            <div class="testimonial-box">
-                <div class="box-top">
-                    <div class="profile">
-                        <div class="profile-img">
-                            <img src="picforreview.png" />
-                        </div>
-                        <div class="name-user">
-                            <strong>בר חדד</strong>
-                            <!--<span>@barrefaeli</span>-->
-                        </div>
+        reviews.push(review);
+        document.forms[0].reset();
+        document.querySelector('form').reset();
+        console.warn('added' , {reviews} );
+        let pre = document.querySelector('#msg pre');
+        pre.textContent = '\n' + JSON.stringify(reviews, '\t', 2);
+
+        //saving to localStorage
+        localStorage.setItem('MyReviewList', JSON.stringify(reviews) );
+    }
+    document.addEventListener('DOMContentLoaded', ()=>{
+        document.getElementById('btn').addEventListener('click', addreview);
+    });
+</script>
+
+<section id="testimonials">
+    <div class="testimonial-heading">
+        <h1>לקוחות כותבים</h1>
+    </div>
+    <div class="testimonial-box-container">
+        <div class="testimonial-box">
+            <div class="box-top">
+                <div class="profile">
+                    <div class="profile-img">
+                        <img src="/static/images/riviews_page_images/picforreview.png" />
                     </div>
-                    <div class="reviews">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                    <div class="name-user">
+                        <strong>בר חדד</strong>
                     </div>
                 </div>
-                <div class="client-comment">
-                    <p>אני מגיעה מחדרה בשביל להסתפר אצל דודי!!! ספר מספר 1 בארץ</p>
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
                 </div>
             </div>
-            <div class="testimonial-box">
-                <div class="box-top">
-                    <div class="profile">
-                        <div class="profile-img">
-                            <img src="picforreview.png" />
-                        </div>
-                        <div class="name-user">
-                            <strong>איתי בן שאול</strong>
-                            <!--<span>@barrefaeli</span>-->
-                        </div>
-                    </div>
-
-                    <div class="reviews">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i> <!--כוכב ריק-->
-                    </div>
-                </div>
-
-                <div class="client-comment">
-                    <p>תודה רבה על שירות אדיב! אין ספק שאחזור שוב </p>
-                </div>
-
-            </div>
-            <div class="testimonial-box">
-                <div class="box-top">
-                    <div class="profile">
-                        <div class="profile-img">
-                            <img src="picforreview.png" />
-                        </div>
-                        <div class="name-user">
-                            <strong>איריס בר נתן</strong>
-                            <!--<span>@barrefaeli</span>-->
-                        </div>
-                    </div>
-                    <div class="reviews">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i> <!--כוכב ריק-->
-                    </div>
-                </div>
-                <div class="client-comment">
-                    <p>ספר תותח! צובעת ומסתפרת רק אצלו</p>
-                </div>
-            </div>
-            <div class="testimonial-box">
-                <div class="box-top">
-                    <div class="profile">
-                        <div class="profile-img">
-                            <img src="picforreview.png" />
-                        </div>
-                        <div class="name-user">
-                            <strong>אסף כהן</strong>
-                            <!--<span>@barrefaeli</span>-->
-                        </div>
-                    </div>
-
-                    <div class="reviews">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i> <!--כוכב ריק-->
-                        <i class="far fa-star"></i> <!--כוכב ריק-->
-                    </div>
-                </div>
-                <div class="client-comment">
-                    <p>שירות נחמד וספר מיקצועי!</p>
-                </div>
+            <div class="client-comment">
+                <p>אני מגיעה מחדרה בשביל להסתפר אצל דודי!!! ספר מספר 1 בארץ</p>
             </div>
         </div>
-    </section>
+        <div class="testimonial-box">
+            <div class="box-top">
+                <div class="profile">
+                    <div class="profile-img">
+                        <img src="/static/images/riviews_page_images/picforreview.png" />
+                    </div>
+                    <div class="name-user">
+                        <strong>איתי בן שאול</strong>
+                        <!--<span>@barrefaeli</span>-->
+                    </div>
+                </div>
+
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i> <!--כוכב ריק-->
+                </div>
+            </div>
+
+            <div class="client-comment">
+                <p>תודה רבה על שירות אדיב! אין ספק שאחזור שוב </p>
+            </div>
+
+        </div>
+        <div class="testimonial-box">
+            <div class="box-top">
+                <div class="profile">
+                    <div class="profile-img">
+                        <img src="/static/images/riviews_page_images/picforreview.png" />
+                    </div>
+                    <div class="name-user">
+                        <strong>איריס בר נתן</strong>
+                        <!--<span>@barrefaeli</span>-->
+                    </div>
+                </div>
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i> <!--כוכב ריק-->
+                </div>
+            </div>
+            <div class="client-comment">
+                <p>ספר תותח! צובעת ומסתפרת רק אצלו</p>
+            </div>
+        </div>
+        <div class="testimonial-box">
+            <div class="box-top">
+                <div class="profile">
+                    <div class="profile-img">
+                        <img src="/static/images/riviews_page_images/picforreview.png" />
+                    </div>
+                    <div class="name-user">
+                        <strong>אסף כהן</strong>
+                        <!--<span>@barrefaeli</span>-->
+                    </div>
+                </div>
+
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i> <!--כוכב ריק-->
+                    <i class="far fa-star"></i> <!--כוכב ריק-->
+                </div>
+            </div>
+            <div class="client-comment">
+                <p>שירות נחמד וספר מיקצועי!</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 {% endblock %}
