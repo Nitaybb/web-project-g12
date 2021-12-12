@@ -1,5 +1,4 @@
 
-
 .about-section{
     background: url(/static/Images/home_page_images/HomePagePic8.jpg) no-repeat left;
     background-size: 80%;
@@ -9,8 +8,7 @@
 }
 
 .inner-container{
-
-    width: 80%;
+    width: 62%;
     opacity: 0.8;
     float: right;
     background-color: #fdfdfd;
