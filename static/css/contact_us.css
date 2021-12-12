@@ -10,6 +10,8 @@
         'left2 middle2 right2'
         'left3 middle3 right3'
         'left4 middle4 right4'
+        'left4 middle5 middle5'
+        'map map map'
         'space space space'
         'footer footer footer';
         grid-template-rows: 20px 20px 20px 20px 25px;
@@ -34,7 +36,12 @@
             width: 30px;
             height: 30px;
         }
-        #logo5{     grid-area: space;
+
+        #map{ grid-area: map;
+            padding: 0;
+            margin: 0;
+        }
+        #logo6{     grid-area: space;
         }
 
         #Name1 {   grid-area: middle1;
@@ -44,6 +51,8 @@
         #Name3 {   grid-area: middle3;
         }
         #Name4 {   grid-area: middle4;
+        }
+         #Name5 {   grid-area: middle5;
         }
         #Link1 {   grid-area: right1;
         }
