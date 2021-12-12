@@ -165,6 +165,10 @@ form .btn button:hover{
 a{
     text-decoration: none;
 }
+
+.text{
+    color: #7a5a51;
+}
 #testimonials{
     display: flex;
     justify-content: center;
