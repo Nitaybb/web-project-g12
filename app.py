@@ -23,13 +23,14 @@ def about_func():
 def products():
     return render_template('products.html')
 
+
 @app.route('/catalog')
 def catalog_func():
     return render_template('catalog.html', color='green')
 
-@app.route('/navigation_map')
-def navigation_map():
-    return render_template('navigation_map.html')
+# @app.route('/navigation_map')
+# def navigation_map():
+#   return render_template('navigation_map.html')
 
 
 @app.route('/contact_us')

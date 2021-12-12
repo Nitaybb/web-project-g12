@@ -2,13 +2,13 @@ header {
   height: 50px;
 }
 
+
 .fixed-nav-bar {
   position: fixed;
   top: 0;
   z-index: 9999;
   width: 100%;
   height: 50px;
-
   background-color: #2D3644;
   place-items: center;
   text-align: center;
@@ -36,7 +36,7 @@ header {
 
 }
 .menu a, .menu a:visited {
-  color: #ffffff;
+  color: #d1b591;
 }
 .menu a:hover, .menu a:target {
   color: #ebebeb;
@@ -47,23 +47,29 @@ header {
   display: inline-block;
   place-items: center;
   position: center;
+
 }
 .sitename {
   display: inline-block;
   margin-right: 20px;
   margin-left: 10px;
 }
+
 a.sitename, a:visited.sitename {
   color: #e0e0e0;
 }
+
 .menu-items li {
   display: inline-block;
   margin-right: 10px;
   margin-left: 10px;
 }
+
 .menu-items a {
   text-decoration: none;
+
 }
+
 .show, .hide {
   display: none;
   padding-left: 15px;
@@ -72,9 +78,11 @@ a.sitename, a:visited.sitename {
   background-position: center left;
   color: #dde1e2;
 }
+
 .show {
   background-image: url(assets/down-arrow-icon.png);
 }
+
 .hide {
   background-image: url(assets/up-arrow-icon.png);
 }
