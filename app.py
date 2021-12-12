@@ -37,10 +37,14 @@ def contact_us():
     return render_template('contact_us.html')
 
 
-
 @app.route('/registeration')
 def registeration():
     return render_template('registeration.html')
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
 
 @app.route('/reviews')
 def reviews():

@@ -1,24 +1,17 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    הרשמה
+    התחברות
 {% endblock %}
 
 {% block body %}
-    {% set page_name = 'הרשמה לאתר' %}
-    <h1> {{ page_name }}</h1>
+
 
 <div class="container" onload>
     <form action="action_page.php">
         <div class="container">
-          <p>אנא מלא את פרטייך האישיים על מנת להירשם</p>
+          <p>אנא מלא טלפון ואימייל על מנת להתחבר</p>
           <hr>
-
-          <label for="FirstNameRe"><b>שם פרטי:</b></label>
-          <input type="text" placeholder="הכנס שם פרטי" name="FirstNameRe" id="FirstNameRe" required><br>
-
-          <label for="LastNameRe"><b>שם משפחה:</b></label>
-          <input type="text" placeholder="הכנס שם משפחה" name="LastName" id="LastNameRe" required><br>
 
           <label for="PhoneNumber"><b>מספר טלפון:</b></label>
           <input type="text" placeholder="הכנס מספר טלפון" name="phoneNumber" id="phoneNumberRe" required>
@@ -26,20 +19,13 @@
           <label for="Email"><b>אימייל:</b></label>
           <input type="email" placeholder="הכנס אימייל" name="Email" id="EmailRe" required>
 
-          <h5>מין:</h5>
-          <select class="GendarSelectRe" aria-label="GendarSelectRe">
-            <option value="זכר">זכר</option>
-            <option value="נקבה">נקבה</option>
-            <option value="אחר">אחר</option>
-          </select><br>
-
           <hr>
 
-          <button type="submit" class="registerbtn">הירשם\י</button>
+          <button type="submit" class="registerbtn">התחבר\י</button>
         </div>
 
         <div class="container signin">
-          <p>משתמש כבר רשום?<a href="/login">התחבר</a>.</p>
+          <p>משתמש כבר רשום?<a href="/registeration">התחבר</a>.</p>
         </div>
       </form>
 
