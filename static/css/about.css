@@ -9,12 +9,13 @@
 }
 
 .inner-container{
-    width: 60%;
+
+    width: 80%;
     opacity: 0.8;
     float: right;
     background-color: #fdfdfd;
     border: 1px solid #545454 ;
-    padding: 100px;
+    padding: 20px;
 }
 
 .inner-container h1{
@@ -39,9 +40,7 @@
 }
 
 @media screen and (max-width:2000px){
-    .inner-container{
-        padding: 10px;
-    }
+
 }
 
 @media screen and (max-width:800px){
