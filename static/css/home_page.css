@@ -93,7 +93,7 @@
 .slides{
     grid-area: down;
     width: 500%;
-    height: 500px;
+    height: 300px;
    display: flex;
 }
 
