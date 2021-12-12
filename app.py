@@ -23,6 +23,10 @@ def about_func():
 def products():
     return render_template('products.html')
 
+@app.route('/appointment')
+def appointment():
+    return render_template('appointment_use.html')
+
 
 @app.route('/catalog')
 def catalog_func():
