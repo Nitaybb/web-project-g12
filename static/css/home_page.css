@@ -56,7 +56,6 @@
 }
 
 .hero-text{
-
     text-align: center;
     position: absolute;
     top: 40%;
@@ -211,7 +210,13 @@
         'left'
         'down'
         grid-template-columns: 50%  50%;
-}
+    }
+    .hero-text h1{
+    Font-size: 45px;
+    }
+    .hero-text h2{
+    Font-size: 75px;
+    }
 
 
 }

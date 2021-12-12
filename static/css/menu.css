@@ -4,7 +4,7 @@ header {
 
 
 .fixed-nav-bar {
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 9999;
   width: 100%;
@@ -111,7 +111,7 @@ a.sitename, a:visited.sitename {
   .show, .hide {
     position: absolute;
     top: 0;
-    right: 15px;
+    right: 40px;
   }
   .show {
     display: inline-block;
@@ -201,4 +201,11 @@ a {
 .signin {
   background-color: #f1f1f1;
   text-align: center;
+}
+
+@media(max-width:800px){
+    header {
+    height: 30px;
+    }
+
 }
